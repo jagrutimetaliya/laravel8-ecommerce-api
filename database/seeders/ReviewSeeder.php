@@ -3,7 +3,7 @@
 namespace Database\Seeders;
 
 use Illuminate\Database\Seeder;
-
+use App\Models\Review;
 class ReviewSeeder extends Seeder
 {
     /**
@@ -13,6 +13,7 @@ class ReviewSeeder extends Seeder
      */
     public function run()
     {
-        //
+        //Review::factory(300)->create();
+        app(\Database\Factories\ReviewFactory::class)->count(300)->create();
     }
 }
